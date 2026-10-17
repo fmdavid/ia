@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hardware y software aplicado a la IA</title>
+<style>
+  :root { --ink: #161a20; --dark: #12151b; --card: #edeff2; --line: #d7dbe0; --slate: #5b6b7a; --copper: #c97a3d; --copper-soft: #f6e9dd; --teal: #1c7c84; --teal-soft: #e7f1f1; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Calibri, "Segoe UI", system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.4; }
+  header { background: var(--dark); color: #fff; padding: 22px 20px 18px; border-bottom: 4px solid var(--copper); }
+  header h1 { margin: 0; font-size: 1.7rem; }
+  header p { margin: 4px 0 0; color: #c7cdd6; }
+  main { max-width: 980px; margin: 0 auto; padding: 18px 16px 30px; }
+  h2 { font-size: 1.15rem; margin: 26px 0 10px; color: #a85f28; }
+  .grande { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .tarjeta { display: block; text-decoration: none; color: var(--ink); background: var(--teal-soft); border: 2px solid transparent; border-radius: 12px; padding: 16px 18px; transition: transform .12s, border-color .12s; }
+  .tarjeta:hover, .tarjeta:focus-visible { border-color: var(--teal); transform: translateY(-2px); outline: none; }
+  .tarjeta.cobre { background: var(--copper-soft); }
+  .tarjeta.cobre:hover, .tarjeta.cobre:focus-visible { border-color: var(--copper); }
+  .tarjeta b { display: block; font-size: 1.25rem; margin-bottom: 4px; }
+  .tarjeta span { color: var(--slate); }
+  .tarjeta em { display: inline-block; margin-top: 10px; font-style: normal; font-weight: 700; color: var(--teal); }
+  .tarjeta.cobre em { color: var(--copper); }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  li a { font-weight: 700; color: var(--teal); text-decoration: none; }
+  li a:hover { text-decoration: underline; }
+  li span { color: var(--slate); }
+  footer { max-width: 980px; margin: 0 auto 24px; padding: 12px 16px 0; border-top: 1px solid var(--line); color: var(--slate); font-size: .85rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hardware y software aplicado a la IA</h1>
+  <p>Máster en Comunicación y Estrategia Digital con IA · Cámara de Comercio de Sevilla · 3 de noviembre de 2026 · David Fernández Martínez</p>
+</header>
+<main>
+  <div class="grande">
+    <a class="tarjeta cobre" href="hoja.pdf">
+      <b>La hoja de hoy</b>
+      <span>Las cinco preguntas, las siglas con su cocina, cuánto mide un modelo, qué mirar en la ficha de un portátil y los enlaces de la sesión.</span>
+      <em>Descargar el PDF →</em>
+    </a>
+    <a class="tarjeta" href="monta/">
+      <b>Monta tu equipo</b>
+      <span>La web de la dinámica: elige un perfil, llena la cesta sin pasarte del presupuesto y mira si cumple.</span>
+      <em>Abrir la web →</em>
+    </a>
+  </div>
+
+  <h2>Para probar en casa</h2>
+  <ul>
+    <li><a href="https://chat.webllm.ai">WebLLM Chat</a> <span>· un modelo de IA dentro del navegador, sin instalar nada (lo que hicisteis en el aula).</span></li>
+    <li><a href="https://lmstudio.ai">LM Studio</a> <span>· descarga modelos abiertos y chatea con ellos en tu equipo, sin conexión.</span></li>
+    <li><a href="https://arena.ai">arena.ai</a> <span>· compara dos modelos a ciegas con la misma pregunta.</span></li>
+  </ul>
+
+  <h2>Para seguir aprendiendo</h2>
+  <ul>
+    <li><a href="https://www.elementsofai.com/es">Elementos de IA</a> <span>· curso gratuito de la Universidad de Helsinki, sin matemáticas ni programación.</span></li>
+    <li><a href="https://hardwareialocal.es/npu-vs-gpu-cpu-ia-local/">Qué comprar para IA en local</a> <span>· guía práctica sobre CPU, GPU y NPU.</span></li>
+    <li><a href="https://www.hp.com/co-es/tech-takes/inteligencia-artificial/conceptos/aceleradores-hardware-ia-npu-tpu-gpu.html">NPU, TPU, GPU y más</a> <span>· artículo de un fabricante (HP) que compara los chips de IA.</span></li>
+  </ul>
+</main>
+<footer>Precios y nombres de modelos, a octubre de 2026: cambian deprisa. Las herramientas cambian cada seis meses; lo que hay debajo, no.</footer>
+</body>
+</html>

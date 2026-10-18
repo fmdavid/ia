@@ -299,11 +299,11 @@ const PERFILES = [
     quien: "Lleva las redes de tres marcas pequeñas.",
     hace: ["Unos diez vídeos cortos al mes, generados en la nube.", "Imágenes para publicaciones.", "Monta y recorta los vídeos en su portátil."],
     importa: "Publicar a tiempo y no gastar en lo que no usa." },
-  { n: "Podcaster y locutor", foto: "img/perfil_podcaster.jpg", b: 900,
+  { n: "Podcaster", foto: "img/perfil_podcaster.jpg", b: 900,
     quien: "Graba un pódcast semanal y hace locuciones por encargo.",
     hace: ["Graba y edita audio.", "Transcribe los episodios.", "A veces genera voces o sintonías."],
     importa: "Que suene bien. El vídeo no le interesa." },
-  { n: "Editor de vídeo freelance", foto: "img/perfil_editor.jpg", b: 2500,
+  { n: "Editora de vídeo freelance", foto: "img/perfil_editor.jpg", b: 3000,
     quien: "Edita vídeo corporativo y de eventos para varios clientes.",
     hace: ["Edición de vídeo en 4K, a diario.", "Quiere probar a generar imagen en su propio equipo.", "Guarda proyectos muy pesados."],
     importa: "Que el equipo no le frene y no perder material." },
@@ -370,7 +370,9 @@ function evaluate(pi, sel) {
     if (has("video") || has("videopro")) add("ambar", "Paga una suscripción de vídeo que no le interesa.");
   }
   if (pi === 2) { // Editor de video
-    if (local) add("ok", "Gráfica dedicada, o mucha memoria unificada: puede editar y generar imagen en local.");
+    const potente = eq.some((e) => e.vram >= 12 || (e.unificada && e.ram >= 24));
+    if (potente) add("ok", "Gráfica potente, o mucha memoria unificada: puede editar en 4K y generar imagen en local.");
+    else if (local) add("ambar", "Una gráfica con 8 GB de VRAM se queda justa para editar en 4K a diario con efectos y para generar imagen: mejor 12 GB o más.");
     else add("rojo", "Para editar en 4K y generar en local necesita gráfica dedicada o mucha memoria unificada.");
     if (maxRam >= 24) add("ok", "Memoria suficiente para editar en 4K.");
     else if (maxRam >= 16) add("ambar", "Con 16 GB irá justo editando en 4K.");
